@@ -1,45 +1,49 @@
 # Wiltonverse Open Core
 
+![Wiltonverse](docs/banner.png)
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 ![Made in Brazil](https://img.shields.io/badge/made%20in-Brazil-00bfff)
+![Living AI](https://img.shields.io/badge/living%20AI-eternal-informational)
 
 > **The first living AI ecosystem made in Brazil, for the world.**
 
 ---
 
-## 🚦 Como Usar o Wiltonverse (Guia para Todos os Níveis)
+## 🚦 How to Use Wiltonverse (For All Levels)
 
-### Leigos (Zero Dev)
-- Explore exemplos em `/examples` e `/docs`.
-- Copie YAML/prompts e cole no ChatGPT, Claude, Perplexity ou outro chat de IA.
-- Veja instruções em [docs/quickstart_pt.md](docs/quickstart_pt.md) ou [docs/quickstart_en.md](docs/quickstart_en.md).
+### Beginner / Non-Dev
+- Explore `/examples` and `/docs` files.
+- Copy YAML/prompts, paste into ChatGPT, Claude, Perplexity, or any LLM.
+- Step-by-step in [docs/quickstart_en.md](docs/quickstart_en.md).
 
-### Dev Intermediário
-- Importe YAML/Markdown em Notion, Zapier, Make, etc.
-- Rode scripts Python/Node com API da OpenAI ou outra LLM.
-- Customizar automações, relatórios e dashboards.
+### Intermediate Dev
+- Import YAML/Markdown into Notion, Zapier, Make, etc.
+- Run Python/Node scripts using OpenAI or another LLM API.
+- Customize automations, reports, and dashboards.
 
-### Expert em IA
-- Fork/clonar o repo e modificar blueprints conforme seu projeto.
-- Criar sua interface (CLI, webapp, bot).
-- Contribuir para a comunidade Wiltonverse.
+### AI Expert
+- Fork/clone and tweak blueprints for your own project.
+- Create custom interfaces (CLI, webapp, bot).
+- Contribute back new modules and cases.
 
 ---
 
-## 🚀 Exemplo: Rodando Wiltonverse com API OpenAI (Python)
+## 🚀 Example: Running Wiltonverse with OpenAI API (Python)
 
-Crie a pasta `/scripts` e salve como `run_wiltonverse_agent.py`:
+Create `/scripts/run_wiltonverse_agent.py` and run:
 
 ```python
 import openai
+
+# Insert your OpenAI API key here!
+openai.api_key = "SUA_OPENAI_KEY"
 
 def load_blueprint(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         return f.read()
 
 def run_agent(prompt, model="gpt-4"):
-    openai.api_key = "SUA_OPENAI_KEY"
     response = openai.ChatCompletion.create(
         model=model,
         messages=[
@@ -55,25 +59,62 @@ if __name__ == "__main__":
     run_agent(blueprint)
 ```
 
-Para rodar:
+**To run:**
 ```bash
 python scripts/run_wiltonverse_agent.py
 ```
 
+**Example output:**  
+```
+Resposta Wiltonverse:
+
+Bem-vindo ao Wiltonverse! Agente inicializado e pronto para orquestrar fluxos inteligentes.
+```
+
 ---
 
-## 📦 FAQ
+## 📦 [FAQ completo →](./FAQ.md)
 
-- **Preciso programar para usar?**  
-  Não! Pode só copiar prompts no ChatGPT. Programadores automatizam ainda mais.
-- **O que é um blueprint?**  
-  É um roteiro/prompt YAML pronto para IA executar.
-- **Posso rodar localmente?**  
-  Sim, com Python e API de IA.
-- **Tem planos para webapp/bot?**  
-  Sim, comunidade aberta! Sugira/contribua.
-- **Quero vídeo/tutorial!**  
-  Em breve! Abra uma issue ou peça por email.
+---
+
+## 🤝 Contribua
+
+- Quer colaborar?  
+  Abra uma *Issue*, faça um *Pull Request*, compartilhe feedback ou novas ideias!
+- Ajude a expandir exemplos, integrar com novas plataformas e criar onboarding para leigos.
+- Proponha tutoriais, vídeos, prints ou bots.  
+- **Wiltonverse = feito por todos, para todos.**
+
+---
+
+## 📣 Divulgação (Copy pronta para LinkedIn, Medium, Grupos)
+
+> 🚀 Proud to launch [Wiltonverse Open Core](https://github.com/Willd-WilD/wiltonverse-open-core): the first “living AI ecosystem” made in Brazil for the world.
+>
+> Modular, autocritical, accessible — plug-and-play for beginners, devs and AI experts.  
+> Fully open source, multi-agent, YAML-powered, with docs and examples for everyone.
+>
+> Fork, use, remix and help us evolve!  
+> #AI #opensource #wiltonverse #BrazilToTheWorld
+
+---
+
+## 🇧🇷 **Como Usar o Wiltonverse (Guia para Todos os Níveis)**
+
+### Leigos (Zero Dev)
+- Explore exemplos em `/examples` e `/docs`.
+- Copie YAML/prompts e cole no ChatGPT, Claude, Perplexity ou outro chat de IA.
+- Veja instruções em [docs/quickstart_pt.md](docs/quickstart_pt.md).
+
+### Dev Intermediário
+- Importe YAML/Markdown em Notion, Zapier, Make, etc.
+- Rode scripts Python/Node com API da OpenAI ou outra LLM.
+- Customize automações, relatórios e dashboards.
+
+### Expert em IA
+- Fork/clonar o repo e modificar blueprints conforme seu projeto.
+- Criar sua interface (CLI, webapp, bot).
+- Contribuir para a comunidade Wiltonverse.
 
 ---
 

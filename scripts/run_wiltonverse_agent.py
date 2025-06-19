@@ -1,11 +1,13 @@
 import openai
 
+# Insira sua API Key da OpenAI abaixo:
+openai.api_key = "SUA_OPENAI_KEY"
+
 def load_blueprint(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         return f.read()
 
 def run_agent(prompt, model="gpt-4"):
-    openai.api_key = "SUA_OPENAI_KEY"
     response = openai.ChatCompletion.create(
         model=model,
         messages=[
