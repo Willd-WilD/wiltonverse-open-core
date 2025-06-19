@@ -1,0 +1,8 @@
+case: "Emotional Dashboard"
+description: >
+  Use agent logs and cycles to create an emotional self-diagnosis and self-improvement dashboard.
+steps:
+  - Sync agent logs to emotional database
+  - Visualize cycles, trends, and recommendations
+  - Automate weekly self-reflection feedback
+expected_outcome: "Deeper self-knowledge and actionable insights."

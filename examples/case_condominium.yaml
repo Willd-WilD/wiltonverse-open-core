@@ -1,0 +1,8 @@
+case: "Condominium AI Management"
+description: >
+  Apply Wiltonverse blueprints to automate workflows and compliance in residential or commercial buildings.
+steps:
+  - Integrate YAML blueprint with building admin system
+  - Automate notification, payment, and maintenance tasks
+  - Log and audit agent performance in dashboards
+expected_outcome: "Reduced manual overhead, more transparency, happier residents."

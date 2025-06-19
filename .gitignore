@@ -1,0 +1,6 @@
+# Ignore system files, temp files and local config
+*.DS_Store
+*.env
+__pycache__/
+.idea/
+.vscode/
