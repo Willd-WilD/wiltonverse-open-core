@@ -1,0 +1,8 @@
+type: "state_snapshot_schema"
+required:
+  - "ts_utc"
+  - "manifest_hash"
+  - "state_hash"
+  - "registry_hash"
+  - "governance_hash"
+  - "truth_state"

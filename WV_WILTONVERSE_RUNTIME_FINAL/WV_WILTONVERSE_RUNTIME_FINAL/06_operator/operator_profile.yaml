@@ -1,0 +1,19 @@
+operator_profile:
+  profile_id: "WV-OPERATOR-PROFILE-002"
+  truth_state: "DECLARED"
+  intended_operator: "Solo founder or independent reproducer"
+  required_skills:
+    - "Run PowerShell scripts"
+    - "Edit YAML safely"
+    - "Read logs and reports"
+  minimum_environment:
+    os: "Windows 10/11 or compatible PowerShell environment"
+    powershell_major: 5
+    optional_python_major: 3
+  success_definition:
+    - "Environment check passes"
+    - "Compile completes"
+    - "State snapshot exists"
+    - "Heartbeat log exists"
+    - "Benchmark results exist"
+    - "Verification report exists"

@@ -1,0 +1,21 @@
+evidence_policy:
+  version: "1.0.0"
+  truth_state: "DECLARED"
+  mandatory_artifacts_for_partial_verified:
+    - "08_evidence/hash_inventory.txt"
+    - "08_evidence/state_snapshot.json"
+    - "08_evidence/benchmark_results.json"
+    - "08_evidence/verification_report.json"
+    - "08_evidence/environment_check_report.json"
+    - "09_logs/heartbeat_log.jsonl"
+    - "09_logs/runtime_event_log.jsonl"
+  mandatory_artifacts_for_verified:
+    - "07_export/llm_portable_pack.zip"
+    - "08_evidence/evidence_bundle.zip"
+    - "08_evidence/independent_reproduction_report.json"
+  integrity_requirements:
+    - "Hash inventory must be generated after compile_pack."
+    - "Verification report must be generated after compile and heartbeat."
+    - "Evidence bundle must include hashes, logs, and reports."
+  non_claims:
+    - "Evidence presence alone does not imply business value or institutional acceptance."

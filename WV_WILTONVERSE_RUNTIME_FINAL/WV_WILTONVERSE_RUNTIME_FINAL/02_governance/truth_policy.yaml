@@ -1,0 +1,12 @@
+truth_policy:
+  version: "1.0.0"
+  semantics:
+    VERIFIED: "Supported by external evidence generated outside chat and attached as artifact."
+    DECLARED: "Designed, inferred, or prepared, but not externally evidenced in the current runtime cycle."
+    UNKNOWN: "Not established and must not be asserted as true."
+  required_fields:
+    - "truth_state"
+  enforcement:
+    - "All canonical YAML artifacts must declare package-level or object-level truth_state."
+    - "Promotion decisions must cite evidence artifacts."
+    - "Chat-only assertions remain DECLARED."

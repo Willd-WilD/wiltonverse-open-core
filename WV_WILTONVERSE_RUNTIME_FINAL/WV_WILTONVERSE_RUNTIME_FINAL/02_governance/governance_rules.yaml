@@ -1,0 +1,30 @@
+governance_layer:
+  version: "1.0.0"
+  truth_state: "DECLARED"
+  principles:
+    - "ADD_ONLY"
+    - "FAIL_CLOSED"
+    - "TRUTH_STATE_REQUIRED"
+    - "EVIDENCE_BEFORE_PROMOTION"
+    - "NO_SILENT_OVERWRITE"
+    - "RAW_HISTORY_IS_NOT_SOURCE_OF_TRUTH"
+  hard_rules:
+    - "No required artifact, no compile."
+    - "No successful verify step, no integrity claim."
+    - "No second-machine run, no independent reproducibility claim."
+    - "No evidence bundle, no promotion."
+  rollback_guard:
+    - "Version bump required for canonical state changes."
+    - "Previous valid manifest remains authoritative until replacement passes verify_pack."
+    - "Deprecated modules remain append-only with explicit status changes."
+  execution_boundary:
+    in_chat_possible:
+      - "design"
+      - "schema emission"
+      - "runbook authoring"
+      - "script generation"
+    external_required:
+      - "PowerShell execution"
+      - "log generation"
+      - "hash generation in operator environment"
+      - "independent reproduction"

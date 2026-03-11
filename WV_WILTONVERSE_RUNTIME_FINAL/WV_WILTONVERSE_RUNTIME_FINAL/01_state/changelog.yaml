@@ -1,0 +1,12 @@
+changelog:
+  - version: "1.0.0"
+    date_utc: "2026-03-09T00:00:00Z"
+    change_type: "stage_compilation"
+    title: "Compiled reproducibility and validation runtime stage"
+    details:
+      - "Merged base runtime pack with EXEC improvements"
+      - "Added state snapshot builder"
+      - "Added evidence policy and evidence bundle generator"
+      - "Added full-cycle runner"
+      - "Added replication and audit documentation"
+      - "Added schemas for verification and state snapshot artifacts"

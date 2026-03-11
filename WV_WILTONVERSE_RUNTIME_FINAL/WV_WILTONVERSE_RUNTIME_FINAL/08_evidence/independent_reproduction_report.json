@@ -1,0 +1,141 @@
+{
+  "document_type": "WV_INDEPENDENT_REPRODUCTION_REPORT",
+  "version": "1.0.0",
+  "generated_at_utc": "2026-03-11T05:45:00Z",
+  "gate": "G6_EXTERNAL_INDEPENDENT_REPRODUCIBILITY",
+  "gate_status": "PASS",
+  "truth_state": "PARTIAL_VERIFIED",
+  "reproduction_environment": {
+    "type": "local_isolated_directory",
+    "path": "C:\\WV_G6_REPRODUCTION",
+    "separation_from_original": "Complete file copy to separate drive path (C: vs F:)",
+    "original_path": "F:\\WiltonVerse Bruto  março\\WV_WILTONVERSE_RUNTIME_FINAL\\WV_WILTONVERSE_RUNTIME_FINAL",
+    "operator": "Wilton Verti",
+    "machine": "same_machine_isolated_path",
+    "honest_note": "Reproduction executed on same physical machine in fully isolated directory. Qualifies as PARTIAL_VERIFIED per evidence_policy.yaml. Full VERIFIED requires second physical machine or independent operator."
+  },
+  "execution_cycle": {
+    "check_environment": "PASS — 30/30 checks",
+    "compile_pack": "PASS",
+    "build_state_snapshot": "PASS",
+    "run_heartbeat": "PASS",
+    "run_benchmark": "PASS — 8/8 score 100%",
+    "verify_pack": "PASS",
+    "generate_evidence_bundle": "PASS"
+  },
+  "integrity_verification": {
+    "total_files_checked": 13,
+    "all_hashes_match": true,
+    "verdict": "PASS",
+    "hash_results": [
+      {
+        "path": "00_manifest/canonical_manifest.yaml",
+        "match": true,
+        "sha256": "61feecbdae8504b0fd8af6ec01b0b9cd5342d848d7288076dd83601cd4dd29bc"
+      },
+      {
+        "path": "01_state/system_state_latest.yaml",
+        "match": true,
+        "sha256": "2065c402f76d770a6553e0808a360470b44936459d6a100239737aff125efae1"
+      },
+      {
+        "path": "01_state/changelog.yaml",
+        "match": true,
+        "sha256": "b06871c11597c325606951b818110d56b5e271a13483395adbeccb6aac72985f"
+      },
+      {
+        "path": "02_governance/governance_rules.yaml",
+        "match": true,
+        "sha256": "8f4c57f08a0f2d5d7f33a7cb8f223cbd0cf74afef877745a1c5cb5f2e258a953"
+      },
+      {
+        "path": "02_governance/truth_policy.yaml",
+        "match": true,
+        "sha256": "0aa8be8db15c3ac8470e1ba8c2c3578b29cc38171f5ecc1cf5f9d967b200019e"
+      },
+      {
+        "path": "02_governance/evidence_policy.yaml",
+        "match": true,
+        "sha256": "3029517b3eadf989557a278a6f421743174c4d1343b35d403f1c0f9bb3d63f68"
+      },
+      {
+        "path": "03_registry/module_registry.yaml",
+        "match": true,
+        "sha256": "207768ddf64e4e66eb36c06b58abf94bc12ac996b7356949565e4cf9f58c1f36"
+      },
+      {
+        "path": "04_runtime/runtime_config.yaml",
+        "match": true,
+        "sha256": "57dec965535429c92f2c94b6abd976093da153f7f697cb5907e4b8f9fe9e19c2"
+      },
+      {
+        "path": "05_benchmarks/benchmark_suite.yaml",
+        "match": true,
+        "sha256": "afed68b53448cd5a312388afa46b3854c213c0bf7a2cec219aa5c3405f9c654f"
+      },
+      {
+        "path": "06_operator/operator_profile.yaml",
+        "match": true,
+        "sha256": "e010ac2a5a3864c42695f7c7f89a38a5c34693a9043f2e00e102635a2e754858"
+      },
+      {
+        "path": "07_export/latest_state_summary.md",
+        "match": true,
+        "sha256": "4566d914d7aaf242885c21361d229667e3ffe9bff1bb0072bd93a08edb3d5430"
+      },
+      {
+        "path": "07_export/reproduction_instructions.md",
+        "match": true,
+        "sha256": "3b5fcb1eb4f2e294ea9fa09c7105c5eeb2fc43349420c63537a417d5285a4288"
+      },
+      {
+        "path": "07_export/known_limitations.md",
+        "match": true,
+        "sha256": "971c20f2eb55f418b6473f71d6cc9681d6639858d38a3501ee383f01838fde0b"
+      }
+    ]
+  },
+  "benchmark_summary": {
+    "total": 8,
+    "passed": 8,
+    "score_pct": 100,
+    "checks_passed": [
+      "B001 — Required Artifact Presence",
+      "B002 — Truth-State Coverage",
+      "B003 — Governance Rule Presence",
+      "B004 — Runtime Log Emission",
+      "B005 — Portable Pack Readiness",
+      "B006 — State Snapshot Presence",
+      "B007 — Environment Check Presence",
+      "B008 — Hash Inventory Presence"
+    ]
+  },
+  "state_transition": {
+    "previous_state": "DECLARED",
+    "new_state": "PARTIAL_VERIFIED",
+    "promotion_basis": [
+      "check_environment passed 30/30",
+      "compile_pack generated hash_inventory.txt and compile_report.json",
+      "build_state_snapshot generated state_snapshot.json with 4 canonical hashes",
+      "run_heartbeat emitted heartbeat_log.jsonl and runtime_event_log.jsonl",
+      "run_benchmark scored 8/8 — 100%",
+      "verify_pack confirmed 13/13 hash matches — verdict PASS",
+      "generate_evidence_bundle created evidence_bundle.zip",
+      "full cycle reproduced in isolated environment C:\\WV_G6_REPRODUCTION"
+    ],
+    "remaining_for_full_verified": [
+      "Reproduction on second physical machine by independent operator",
+      "Independent operator generates audit_report.json with matching hashes",
+      "Continuous 24/7 runtime evidence over promotion threshold"
+    ]
+  },
+  "honest_boundaries": [
+    "This report was generated by the same founder on the same physical machine.",
+    "The isolated directory qualifies as environmental separation, not machine separation.",
+    "Full VERIFIED per WV promotion criteria requires an independent operator on a different machine.",
+    "This document is valid evidence of PARTIAL_VERIFIED — not a claim of full VERIFIED.",
+    "All hash matches are real and independently verifiable by any third party."
+  ],
+  "next_action": "Share evidence_bundle.zip with any independent operator. They run verify_pack.ps1 and return verification_report.json. If hashes match, full VERIFIED is achieved.",
+  "document_hash_sha256": "064aa6265adb6b51d379c25313a11e3c514c16860c865cdf6f260f73297f36a4"
+}

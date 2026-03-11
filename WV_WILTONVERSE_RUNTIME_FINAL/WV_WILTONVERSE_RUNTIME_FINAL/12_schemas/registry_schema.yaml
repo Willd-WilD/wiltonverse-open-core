@@ -1,0 +1,16 @@
+type: "registry_schema"
+required:
+  - "registry_version"
+  - "truth_state"
+  - "modules"
+module_required_fields:
+  - "id"
+  - "name"
+  - "class"
+  - "purpose"
+  - "status"
+  - "truth_state"
+  - "owner"
+  - "dependencies"
+  - "promotable"
+  - "runtime_capable"

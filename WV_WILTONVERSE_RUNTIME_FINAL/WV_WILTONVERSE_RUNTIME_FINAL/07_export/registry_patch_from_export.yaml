@@ -1,0 +1,16 @@
+registry_patch_version: 1.0.0
+generated_at: '2026-03-11T04:18:55.816488+00:00'
+truth_state: DECLARED
+instrucao: Revise cada módulo abaixo. Preencha 'class' e 'purpose'. Incorpore ao module_registry.yaml.
+modulos_detectados:
+- id: NUCLEUS
+  name: Nucleus
+  class: PREENCHER
+  purpose: PREENCHER — detectado no histórico do ChatGPT
+  status: REVISAR
+  truth_state: DECLARED
+  owner: Wiltonverse
+  dependencies: []
+  promotable: true
+  runtime_capable: false
+  notes: Detectado automaticamente. Requer revisão manual.

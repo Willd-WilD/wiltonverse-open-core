@@ -1,0 +1,25 @@
+runtime:
+  runtime_id: "WV-RUNTIME-CONFIG-002"
+  truth_state: "DECLARED"
+  mode: "local_only"
+  heartbeat_interval_minutes: 60
+  root_relative_log_directory: "09_logs"
+  root_relative_evidence_directory: "08_evidence"
+  required_files:
+    - "00_manifest/canonical_manifest.yaml"
+    - "01_state/system_state_latest.yaml"
+    - "02_governance/governance_rules.yaml"
+    - "02_governance/truth_policy.yaml"
+    - "02_governance/evidence_policy.yaml"
+    - "03_registry/module_registry.yaml"
+  fail_closed:
+    invalid_config: true
+    missing_required_file: true
+    hash_mismatch: true
+    missing_hash_inventory_after_compile: true
+  outputs:
+    heartbeat_log: "09_logs/heartbeat_log.jsonl"
+    runtime_event_log: "09_logs/runtime_event_log.jsonl"
+    state_snapshot: "08_evidence/state_snapshot.json"
+    compile_report: "08_evidence/compile_report.json"
+    verification_report: "08_evidence/verification_report.json"

@@ -1,0 +1,6 @@
+type: "evidence_bundle_schema"
+required:
+  - "bundle_created_at_utc"
+  - "included_items"
+  - "bundle_hash"
+  - "verdict"

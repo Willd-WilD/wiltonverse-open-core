@@ -1,0 +1,143 @@
+registry_version: "1.1.0"
+truth_state: "DECLARED"
+modules:
+  - id: "WV-CORE-GOV"
+    name: "Constitutional Governance Layer"
+    class: "governance"
+    purpose: "Enforce ADD_ONLY, FAIL_CLOSED, and promotion discipline"
+    status: "active"
+    truth_state: "VERIFIED"
+    owner: "Wiltonverse"
+    dependencies: []
+    promotable: false
+    runtime_capable: true
+  - id: "WV-TRUTH-POLICY"
+    name: "Truth Policy"
+    class: "epistemic"
+    purpose: "Separate VERIFIED, DECLARED, and UNKNOWN"
+    status: "active"
+    truth_state: "VERIFIED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CORE-GOV"]
+    promotable: false
+    runtime_capable: true
+  - id: "WV-RFC3161-PROVENANCE"
+    name: "Cryptographic Provenance Chain"
+    class: "evidence"
+    purpose: "Anchor artifacts with hashes and timestamps"
+    status: "active"
+    truth_state: "VERIFIED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CORE-GOV"]
+    promotable: false
+    runtime_capable: true
+  - id: "WV-CANONICAL-REGISTRY"
+    name: "Canonical Registry"
+    class: "registry"
+    purpose: "Normalize current ecosystem state into one source of truth"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CORE-GOV", "WV-TRUTH-POLICY"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-CANONICAL-COMPILER"
+    name: "Canonical Compiler"
+    class: "compiler"
+    purpose: "Compile state, governance, and registry into portable pack"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CANONICAL-REGISTRY", "WV-TRUTH-POLICY"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-RUNTIME-FABRIC-MIN"
+    name: "Runtime Fabric Minimal"
+    class: "runtime"
+    purpose: "Emit heartbeat and runtime logs in fail-closed mode"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CANONICAL-COMPILER"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-BENCHMARK-HARNESS-MIN"
+    name: "Benchmark Harness Minimal"
+    class: "benchmark"
+    purpose: "Measure minimal governed execution quality"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-RUNTIME-FABRIC-MIN"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-OPERATOR-SDK-MIN"
+    name: "Operator SDK Minimal"
+    class: "operator_surface"
+    purpose: "Provide runbook and commands for third-party execution"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CANONICAL-COMPILER", "WV-BENCHMARK-HARNESS-MIN"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-EXPORT-PACK-MIN"
+    name: "Export Pack Minimal"
+    class: "portability"
+    purpose: "Generate portable pack for other operators and AIs"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-OPERATOR-SDK-MIN"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-ENVIRONMENT-CHECK"
+    name: "Environment Check"
+    class: "operator_surface"
+    purpose: "Validate that the local machine can run the pack before execution"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-OPERATOR-SDK-MIN"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-CHATGPT-EXPORT-PARSER"
+    name: "ChatGPT Export Parser"
+    class: "ingestion"
+    purpose: "Extract and normalize Wiltonverse-relevant signals from ChatGPT export"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-EXPORT-PACK-MIN"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-STATE-SNAPSHOT-BUILDER"
+    name: "State Snapshot Builder"
+    class: "evidence"
+    purpose: "Emit machine-readable snapshot and hashes for current canonical state"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-CANONICAL-COMPILER", "WV-RFC3161-PROVENANCE"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-EVIDENCE-BUNDLE"
+    name: "Evidence Bundle Generator"
+    class: "evidence"
+    purpose: "Bundle logs, reports, and hashes into a portable verification package"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-STATE-SNAPSHOT-BUILDER", "WV-BENCHMARK-HARNESS-MIN"]
+    promotable: true
+    runtime_capable: true
+  - id: "WV-REPRODUCTION-PROTOCOL"
+    name: "Reproduction Protocol"
+    class: "verification"
+    purpose: "Define the second-machine reproduction path and acceptance criteria"
+    status: "compiled_design"
+    truth_state: "DECLARED"
+    owner: "Wiltonverse"
+    dependencies: ["WV-EVIDENCE-BUNDLE", "WV-OPERATOR-SDK-MIN"]
+    promotable: true
+    runtime_capable: false

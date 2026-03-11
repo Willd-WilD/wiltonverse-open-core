@@ -1,0 +1,7 @@
+type: "verification_report_schema"
+required:
+  - "ts_utc"
+  - "required_files_present"
+  - "hash_inventory_exists"
+  - "integrity_checks"
+  - "verdict"
