@@ -36,8 +36,8 @@ Este repositório contém o **WiltonVerse Runtime Pack** — o pacote portátil 
 
 ```powershell
 # 1. Clone o repositório
-git clone https://github.com/SEU_USUARIO/wiltonverse-runtime
-cd wiltonverse-runtime
+git clone https://github.com/Willd-WilD/wiltonverse-open-core
+cd wiltonverse-open-core
 
 # 2. Entre na pasta de scripts
 cd 10_scripts
@@ -99,8 +99,8 @@ This repository contains the **WiltonVerse Runtime Pack** — a portable package
 **Requirements:** Windows 10/11, PowerShell 5+
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/wiltonverse-runtime
-cd wiltonverse-runtime\10_scripts
+git clone https://github.com/Willd-WilD/wiltonverse-open-core
+cd wiltonverse-open-core\10_scripts
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\run_full_cycle.ps1
 ```
@@ -165,7 +165,7 @@ Benchmark Suite             → 8 automated checks scored 0-100%
 ## Contact
 
 Wilton Verti — São Paulo, Brazil  
-GitHub: [@SEU_USUARIO](https://github.com/SEU_USUARIO)
+GitHub: [@Willd-WilD](https://github.com/Willd-WilD)
 
 *Interested in AI governance, reproducibility, or epistemic honesty in AI systems? Open an issue or reach out.*
 
